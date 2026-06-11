@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(skyblue, rgb(9, 81, 110));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 450px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 20px;
+
+}
+
+.container .title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+
+.courses-types {
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    margin-top: 30px;
+
+}
+
+.course-name .wrapper {
+    width: 25px;
+    background: #ccc;
+    height: 25px;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .circle {
+    width: 13px;
+    height: 13px;
+    background: #999;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.course-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.course-name h2 {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.courses-types .price {
+    font-size: 20px;
+    display: flex;
+    gap: 3px;
+}
+
+.price span {
+    font-size: 17px;
+    margin-top: 3px;
+}
+
+/* =======toggle====== */
+
+input[type="radio"] {
+    display: none;
+}
+
+#html:checked+.courses-types,
+#js:checked+.courses-types,
+#python:checked+.courses-types {
+    border: 3px solid purple;
+    background: rgb(231, 215, 231);
+}
+
+#html:checked+.courses-types .wrapper,
+#js:checked+.courses-types .wrapper,
+#python:checked+.courses-types .wrapper {
+    background: purple;
+}
+
+#html:checked+.courses-types .circle,
+#js:checked+.courses-types .circle,
+#python:checked+.courses-types .circle {
+    background: white;
+}
